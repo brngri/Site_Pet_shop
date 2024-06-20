@@ -1,0 +1,428 @@
+/*
+    @author Bruno R. Negri 
+
+    validação: W3c
+*/
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.Flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Flex2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Flex3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.Flex4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Botao{
+    padding: 20px 30px;
+    background-color: #589442;
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid #3e692e;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.Botao:hover{
+    background-color: #3e692e;
+}
+
+/* Smartphone Portrait >>>>>>>>>>>*/
+
+/* cabeçalho */
+
+#logo img {
+    margin-left: 5px;
+    height: 70px;
+    width: 70px;
+}
+
+
+header {
+    background-color: #589442;
+    height: 70px;
+}
+
+#check {
+    display: none;
+}
+
+label {
+    font-size: 30px;
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+    list-style: none;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    padding-right: 10px;
+    transition: all 0.5s;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+/* main */
+.slide img {
+    height: 100px;
+}
+
+/* sobre nós */
+.sobre {
+    justify-content: center;
+    align-items: center;
+}
+
+#imagemSobre {
+    display: none;
+}
+
+.sobre h1 {
+    margin: 40px 0px 20px 0px;
+    text-align: center;
+    font-size: 50px;
+    color: #1d470d;
+
+}
+
+.sobre p {
+    text-align: justify;
+    margin: 0px 40px 40px 40px;
+}
+
+/* video */
+
+.Video {
+    background: url(img/fundoVideo.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 15px 0px 30px 0px;
+}
+
+.Video h2 {
+    color: #144600;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#video iframe {
+    width: 280px;
+    height: 157px;
+    border: 0;
+}
+
+/* Contato */
+#mapa {
+    display: none;
+}
+
+address {
+    background-color: rgb(13, 61, 3);
+    padding: 30px 0px;
+}
+
+.textoContato {
+    display: none;
+}
+
+/*>>> Serviços <<<*/
+/* cartões */
+
+.cartao {
+    margin-top: 25px;
+    width: 338px;
+    /* imagens devem ter essa largura e pelo menos a metade da altura*/
+    height: 520px;
+    background-color: #e8e8e8;
+    border: 1px solid #a1a1a1;
+    border-radius: 25px;
+    text-align: center;
+    margin: 60px 20px 60px 20px;
+
+}
+
+.cartao img {
+    height: 310px;
+    width: 335px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.cartao h2{
+    margin: 10px 0px;
+}
+
+.cartao p{
+    text-align: left;
+    margin: 0px 0px 40px 20px;
+}
+
+
+/*>>> Produtos <<<*/
+
+.bloco{
+    margin: 40px 0px 100px 0px;
+}
+
+.bloco img{
+    height: 300px;
+    width: 300px;
+    transition: all 0.2s linear;
+    margin: 20px 0px;
+}
+
+.bloco img:hover{
+    box-shadow: 0 0 8px #0f5f08;
+    border: 1px solid #8ccc83;
+    scale: 1.1;
+}
+
+.bloco h2{
+    text-align: center;
+}
+
+.bloco p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #144600;
+    font-weight: 800;
+}
+
+/* Rodapé */
+footer {
+    background-color: rgb(36, 35, 35);
+    color: #fff;
+}
+
+
+/* Smartphone Landscape >>>>>>>>>>*/
+@media (min-width: 576px) {
+
+    /* Layout */
+    .Container {
+        max-width: 540px;
+    }
+
+    /* main */
+    .slide img {
+        height: 170px;
+    }
+
+    /* Contato */
+    #iconeMapa {
+        margin-left: 130px;
+    }
+
+    /* Rodapé */
+    footer p {
+        margin-left: 120px;
+    }
+
+}
+
+/* Tablet Portrait >>>>>>>>>>>>>>>*/
+@media (min-width: 768px) {
+
+    /* Layout */
+    .Container {
+        max-width: 720px;
+    }
+
+    /* main */
+    .slide img {
+        height: 240px;
+    }
+
+    /* Video */
+    #video iframe {
+        width: 420px;
+        height: 235px;
+    }
+
+    /* Contato */
+    #iconeMapa {
+        margin-left: 57px;
+    }
+
+    /* Rodapé */
+    footer p {
+        margin-left: 70px;
+    }
+}
+
+/* Tablet Landscape >>>>>>>>>>>>>>*/
+@media (min-width: 992px) {
+
+    /* Layout */
+    .Container {
+        max-width: 960px;
+    }
+
+    /* main */
+    .slide img {
+        height: 290px;
+    }
+
+    /* sobre nos */
+    #imagemSobre {
+        display: inline;
+        margin-top: 40px;
+    }
+
+    .sobre p {
+        text-align: justify;
+        margin: 0px 2px;
+    }
+
+}
+
+/* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1200px) {
+
+    /* Layout */
+    .Container {
+        max-width: 1140px;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    #logo img {
+        height: 100px;
+        width: 100px;
+        margin-left: 20px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin: 25px 300px 0px 0px;
+    }
+
+    nav ul li {
+        position: static;
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        font-size: 22px;
+    }
+
+    nav ul li a:hover {
+        color: #1d470d;
+    }
+
+    /* main */
+    .slide img {
+        height: 380px;
+    }
+
+    /* Video */
+    .Video {
+        background-attachment: fixed;
+        margin-top: 40px;
+    }
+
+    /* Contato */
+    .Flex2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #iconeMapa {
+        display: none;
+    }
+
+    #mapa {
+        display: inline;
+        margin-left: 100px;
+    }
+
+    .midias {
+        display: flex;
+        flex-direction: column;
+        margin-left: 500px;
+    }
+
+    .midias a {
+        margin-bottom: 30px;
+    }
+
+    .textoContato {
+        display: inline;
+        color: #fff;
+        font-size: 20px;
+
+    }
+
+    .textoContato p {
+        color: #fff;
+        font-size: 20px;
+        margin: 20px 60px 55px 10px;
+    }
+
+    /* Rodapé */
+
+    footer {
+        padding: 12px;
+    }
+
+    footer p {
+        margin-left: 240px;
+    }
+}
